@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "@/components/footer";
 import Filters from "@/components/filters";
-import Navigation from "@/components/navigation";
+import Navigation from "@/components/navigation/home";
 import Banner from "@/components/banner";
 import JobList from "@/components/jobList";
 

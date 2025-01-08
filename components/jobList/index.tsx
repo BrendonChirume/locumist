@@ -1,7 +1,6 @@
-"use client";
-import JobCard from "@/components/card";
+import JobCard from "../jobCard";
 
-const members = [
+export const jobList = [
     {
         companyIcon: <svg className="w-8 h-8" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_715_1824)">
@@ -23,14 +22,14 @@ const members = [
                     <rect width="35" height="35" fill="white"/>
                 </clipPath>
             </defs>
-        </svg>
-        ,
+        </svg>,
         companyName: "Google",
         jobTitle: "Full stack engineer",
         jobDescription: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         jobType: "5 hours",
         location: "Harare CBD",
-        path: "#"
+        date: "May 23, 2025",
+        id: 'adlfjsosiofiosf',
     }, {
         companyIcon: <svg className="w-8 h-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_694_1831)">
@@ -70,7 +69,8 @@ const members = [
         jobDescription: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
         jobType: "Part-time",
         location: "USA, New york city",
-        path: "#"
+        date: "Nov 11, 2022",
+        id: 'jalsdiosdgbnlsv'
     }, {
         companyIcon: <svg className="w-8 h-8" viewBox="0 0 43 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_690_1894)">
@@ -101,20 +101,21 @@ const members = [
         jobDescription: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
         jobType: "Full-time",
         location: "Mauritania",
-        path: "#",
+        date: "Jan 2, 2022",
+        id: 'jasiosnsiosdn'
     }
 ]
 
 export default function JobList() {
     return (
-      <section className="py-10">
+      <section className="py-10" id="job-listing">
           <div className="mx-auto px-4 md:px-8">
               <div className="max-w-md">
                   <h1 className="text-gray-800 text-2xl font-extrabold sm:text-3xl">Latest Jobs</h1>
               </div>
               <ul className="mt-10 divide-y space-y-3">
                   {
-                      members.map((job, idx) => (
+                      jobList.map((job, idx) => (
                         <JobCard
                           job={job}
                           key={idx}/>

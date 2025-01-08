@@ -31,7 +31,7 @@ export default function Footer() {
                   </div>
               </div>
               <div className="mt-10 py-10 border-t md:text-center">
-                  <p>© {new Date().getFullYear()} Float UI Inc. All rights reserved.</p>
+                  <p>© {new Date().getFullYear()} Locumist Inc. All rights reserved.</p>
               </div>
           </div>
       </footer>

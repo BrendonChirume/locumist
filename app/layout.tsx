@@ -21,7 +21,7 @@ export default function RootLayout(
   }>) {
     return (
       <html lang="en">
-      <body className={`${radioCanada}  antialiased`}>
+      <body className={`${radioCanada.className}  antialiased`}>
       {children}
       </body>
       </html>

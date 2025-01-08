@@ -1,6 +1,7 @@
 import {IconArrowRight} from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export default function Banner() {
     return (
@@ -13,15 +14,15 @@ export default function Banner() {
                   <p
                     className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Transforming
                       pharmacy workflows: Join pharmacists nation wide simplifying locum shifts!</p>
-                  <a href="#"
-                     className="inline-flex items-center justify-center px-5 py-3 mr-3 gap-2 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                  <Link href="#"
+                     className="inline-flex items-center justify-center px-5 py-3 mr-3 gap-2 text-base font-medium text-center text-primary-700 rounded-3xl bg-white hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                       Post a job - $299
-                      <IconArrowRight stroke={2}/>
-                  </a>
-                  <a href="#"
-                     className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                      Speak to Sales
-                  </a>
+                      <IconArrowRight stroke={2} size={20}/>
+                  </Link>
+                  {/*<Link href="#"*/}
+                  {/*   className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">*/}
+                  {/*    Speak to Sales*/}
+                  {/*</Link>*/}
               </div>
               <div className="hidden lg:mt-0 lg:col-span-5 lg:flex justify-center">
                   <Image width={350} height={300} src={'/Pharmacist-cuate.svg'} alt="mockup"/>

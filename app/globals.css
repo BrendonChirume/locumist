@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
+
+/*body {*/
+/*    font-family: 'Radio Canada', Arial, Helvetica, sans-serif;*/
+/*}*/

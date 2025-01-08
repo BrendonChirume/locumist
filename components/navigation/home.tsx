@@ -1,6 +1,6 @@
 import Logo from "@/components/logo";
-import {IconArrowRight} from "@tabler/icons-react";
 import React from "react";
+import Link from "next/link";
 
 export default function Navigation() {
     return (
@@ -41,11 +41,17 @@ export default function Navigation() {
                       </li>
                   </div>
                   <li className="order-2 py-5 md:py-0">
-                      <a href="#"
-                         className="px-5 rounded-3xl flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 duration-150 py-2.5 md:inline-flex">
-                          Post a job - $299
-                          <IconArrowRight stroke={2} size={20}/>
-                      </a>
+                      <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
+                          <Link href="/signin"
+                                className="block py-3 text-center text-white md:hover:underline border rounded-lg md:border-none">
+                              Sign in
+                          </Link>
+
+                          <Link href="#"
+                                className="px-5 rounded-3xl flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 duration-150 py-2.5 md:inline-flex">
+                              Sign up
+                          </Link>
+                      </div>
                   </li>
               </ul>
           </nav>
