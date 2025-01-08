@@ -1,6 +1,7 @@
 "use client"
 
 import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 export default function NotFound() {
     const router = useRouter();
@@ -24,10 +25,10 @@ export default function NotFound() {
                         className="block py-2 px-4 text-white font-medium bg-primary-600 duration-150 hover:bg-primary-500 active:bg-primary-700 rounded-lg">
                           Go back
                       </button>
-                      <a href="#"
+                      <Link href="#"
                          className="block py-2 px-4 text-gray-700 hover:bg-gray-50 font-medium duration-150 active:bg-gray-100 border rounded-lg">
                           Contact support
-                      </a>
+                      </Link>
                   </div>
               </div>
           </div>

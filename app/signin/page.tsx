@@ -1,4 +1,5 @@
 import Logo from "@/components/logo";
+import Link from "next/link";
 
 export default function SignIn() {
     return (
@@ -8,9 +9,9 @@ export default function SignIn() {
                   <Logo color="text-primary-700 mx-auto w-fit"/>
                   <div className="mt-5 space-y-2">
                       <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Sign in</h3>
-                      <p className="">Don&#39;t have an account? <a href="javascript:void(0)"
+                      <p className="">Don&#39;t have an account? <Link href="#"
                                                                 className="font-medium text-indigo-600 hover:text-indigo-500">Sign
-                          up</a></p>
+                          up</Link></p>
                   </div>
               </div>
               <div className="bg-white shadow p-4 py-6 space-y-8 sm:p-6 sm:rounded-lg">
@@ -92,7 +93,7 @@ export default function SignIn() {
                   </form>
               </div>
               <div className="text-center">
-                  <a href="javascript:void(0)" className="hover:text-indigo-600">Forgot password?</a>
+                  <Link href="#" className="hover:text-indigo-600">Forgot password?</Link>
               </div>
           </div>
       </main>
