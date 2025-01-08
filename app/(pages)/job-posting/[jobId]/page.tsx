@@ -11,7 +11,7 @@ export default async function JobPosting(
     return (
       <section className="md:px-10 px-4 max-w-screen-xl mx-auto grid grid-cols-12 py-14 gap-x-28">
           <div className="col-span-12 md:col-span-8">
-              <Link href={`/`}
+              <Link href={`/${jobId}`}
                     className="flex items-center justify-start font-medium gap-x-2 text-indigo-600 text-base mb-6">
                   <IconArrowLeft stroke={2} size={16}/>
                   All Jobs
