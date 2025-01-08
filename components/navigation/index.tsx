@@ -42,9 +42,9 @@ export default function Navigation() {
                   </div>
                   <li className="order-2 py-5 md:py-0">
                       <a href="#"
-                         className="px-5 rounded-lg flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 duration-150 py-2.5 md:inline-flex">
+                         className="px-5 rounded-3xl flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 duration-150 py-2.5 md:inline-flex">
                           Post a job - $299
-                          <IconArrowRight stroke={2}/>
+                          <IconArrowRight stroke={2} size={20}/>
                       </a>
                   </li>
               </ul>
