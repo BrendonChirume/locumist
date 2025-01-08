@@ -31,7 +31,7 @@ export default function CheckBox(props: CheckBoxProps) {
     return (
       <label
         htmlFor={id ?? uniqueString}
-        className="text-sm flex flex-1 items-center gap-x-4 text-gray-600">
+        className="text-sm flex flex-1 items-center gap-x-4 text-gray-600 cursor-pointer">
           <input
             className="sr-only"
             id={id ?? uniqueString}
