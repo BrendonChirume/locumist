@@ -1,6 +1,8 @@
 import {IconBriefcaseFilled, IconCalendarWeekFilled, IconClockDollar, IconMapPinFilled} from '@tabler/icons-react';
 import React from "react";
 import Link from "next/link";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 interface JobCardProps {
     job: {
@@ -14,6 +16,8 @@ interface JobCardProps {
         id: string;
     }
 }
+
+dayjs.extend(relativeTime);
 
 export default function JobCard(props: JobCardProps) {
     const {job} = props;
@@ -56,7 +60,7 @@ export default function JobCard(props: JobCardProps) {
                   <div className="mt-5 space-y-4 text-sm sm:mt-0 sm:space-y-2">
                       <div className="flex items-center gap-2">
                           <IconCalendarWeekFilled stroke={2} className="text-gray-400" size={20}/>
-                          {job?.date}
+                          {dayjs(job?.date).fromNow()}
                       </div>
                   </div>
               </div>

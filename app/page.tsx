@@ -14,7 +14,7 @@ export default function Home() {
               <div className="col-span-12 md:col-span-8">
                   <JobList/>
               </div>
-              <div className="hidden md:block col-span-3 -mt-48">
+              <div className="hidden md:block col-span-4 -mt-48">
                   <Filters/>
               </div>
           </section>
