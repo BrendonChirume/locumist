@@ -43,7 +43,7 @@ export default function CheckBox(props: CheckBoxProps) {
             onChange={handleChange}
             className={
                 cn(
-                  "group size-6 flex items-center justify-center rounded-[6px] p-1 ring-1 ring-gray-300",
+                  "group size-6 flex items-center justify-center rounded-md p-1 ring-1 ring-gray-300",
                   "ring-inset data-[checked]:bg-primary-500 data-[checked]:ring-0"
                 )
             }

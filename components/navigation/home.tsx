@@ -31,13 +31,13 @@ export default function Navigation() {
                 className={`flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0`}>
                   <div className="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12">
                       <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
-                          <a href="#">Home</a>
+                          <Link href="/">Home</Link>
                       </li>
                       <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
                           <a href="#">About</a>
                       </li>
                       <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
-                          <a href="#">Contact</a>
+                          <Link href="/contact">Contact</Link>
                       </li>
                   </div>
                   <li className="order-2 py-5 md:py-0">
