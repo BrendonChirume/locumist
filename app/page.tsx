@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "@/components/footer";
 import Filters from "@/components/filters";
 import Navigation from "@/components/navigation/home";
 import Banner from "@/components/banner";
@@ -7,7 +6,7 @@ import JobList from "@/components/jobList";
 
 export default function Home() {
     return (
-      <main>
+      <>
           <Navigation/>
           <Banner/>
           <section className="max-w-screen-xl mx-auto grid grid-cols-12">
@@ -18,7 +17,6 @@ export default function Home() {
                   <Filters/>
               </div>
           </section>
-          <Footer/>
-      </main>
+      </>
     )
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navigation() {
     return (
       <div className="bg-gradient-to-r from-[#334155]  to-[#0f172a]">
-          <nav className="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6 ">
+          <nav className="relative items-center justify-between pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6 ">
               <div className="flex justify-between">
                   <Logo/>
                   <button className="text-gray-500 outline-none md:hidden">
@@ -27,33 +27,28 @@ export default function Navigation() {
                       {/*}*/}
                   </button>
               </div>
-              <ul
-                className={`flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0`}>
+              <div className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                   <div className="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12">
-                      <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
-                          <Link href="/">Home</Link>
-                      </li>
-                      <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
-                          <a href="#">About</a>
-                      </li>
-                      <li className="text-gray-50 hover:bg-white/20 rounded-md py-2 px-4">
-                          <Link href="/contact">Contact</Link>
-                      </li>
+                      <Link href="#" className="text-gray-50 hover:bg-primary-400/20 rounded-md py-2 px-4 -mr-4">About</Link>
                   </div>
-                  <li className="order-2 py-5 md:py-0">
-                      <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
-                          <Link href="/signin"
-                                className="block py-3 text-center text-white md:hover:underline border rounded-lg md:border-none">
-                              Sign in
-                          </Link>
+                  <span className='hidden w-px h-6 bg-primary-400/60 md:block'></span>
+                  <ul
+                    className={`flex-1 justify-end mt-12 md:text-sm md:font-medium md:flex md:mt-0`}>
+                      <li className="order-2 py-5 md:py-0">
+                          <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
+                              <Link href="/signin"
+                                    className="text-gray-50 hover:bg-primary-400/20 rounded-md py-2 px-4 -mx-4">
+                                  Sign in
+                              </Link>
 
-                          <Link href="#"
-                                className="px-5 rounded-3xl flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 focus:ring-4 focus:ring-primary-300 duration-150 py-2.5 md:inline-flex">
-                              Sign up
-                          </Link>
-                      </div>
-                  </li>
-              </ul>
+                              <Link href="#"
+                                    className="px-5 rounded-3xl flex gap-x-2 font-medium text-black text-center bg-white items-center hover:bg-gray-200 focus:ring-4 focus:ring-primary-300 duration-150 py-2.5 md:inline-flex">
+                                  Sign up
+                              </Link>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
           </nav>
       </div>
     )

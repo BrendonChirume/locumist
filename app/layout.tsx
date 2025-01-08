@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {Radio_Canada} from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Footer from "@/components/footer";
 
 const radioCanada = Radio_Canada({
     subsets: ["canadian-aboriginal"],
@@ -22,7 +23,10 @@ export default function RootLayout(
     return (
       <html lang="en">
       <body className={`${radioCanada.className}  antialiased`}>
-      {children}
+      <main>
+          {children}
+          <Footer/>
+      </main>
       </body>
       </html>
     );
