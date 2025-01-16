@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import Filters from "@/components/filters";
 import Navigation from "@/components/navigation/home";
