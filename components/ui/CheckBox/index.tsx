@@ -52,7 +52,7 @@ export default function CheckBox(props: CheckBoxProps) {
               <IconCheck
                 stroke={3}
                 size={20}
-                className="hidden group-data-[checked]:block text-white"/>
+                className="hidden group-data-[checked]:block text-gray-50"/>
           </Checkbox>
           {label}
       </label>

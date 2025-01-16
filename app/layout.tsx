@@ -2,7 +2,6 @@ import type {Metadata} from "next";
 import {Radio_Canada} from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Footer from "@/components/footer";
 
 const radioCanada = Radio_Canada({
     subsets: ["canadian-aboriginal"],
@@ -11,7 +10,7 @@ const radioCanada = Radio_Canada({
 
 export const metadata: Metadata = {
     title: "Locumist",
-    description: "Find and post flexible locum pharmacist positions with ease. Connecting pharmacists to opportunities nationwide.",
+    description: "Find and post flexible locum positions with ease. Connecting professionals to opportunities world wide.",
 };
 
 export default function RootLayout(
@@ -25,7 +24,6 @@ export default function RootLayout(
       <body className={`${radioCanada.className}  antialiased`}>
       <main>
           {children}
-          <Footer/>
       </main>
       </body>
       </html>

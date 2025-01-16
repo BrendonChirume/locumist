@@ -3,15 +3,15 @@ import React from "react";
 import Link from "next/link";
 
 interface Props {
-    color?: string;
+    className?: string;
 }
 
 export default function Logo(props: Props) {
-    const {color} = props;
+    const {className} = props;
     return (
       <Link
         href="/"
-        className={`font-black cursor-pointer text-2xl items-center ${color ?? "text-white"} flex gap-x-2 leading-6`}>
+        className={`font-black cursor-pointer text-2xl items-center inline-block ${className ?? "text-gray-50"} flex gap-x-2 leading-6`}>
           <IconFirstAidKit stroke={2} size={35}/>
           Locumist
       </Link>

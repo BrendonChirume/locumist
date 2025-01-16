@@ -22,7 +22,7 @@ export default function NotFound() {
                       <button
                         onClick={() => router.back()}
                         type="button"
-                        className="block py-2 px-4 text-white font-medium bg-primary-600 duration-150 hover:bg-primary-500 active:bg-primary-700 rounded-lg">
+                        className="block py-2 px-4 text-gray-50 font-medium bg-primary-600 duration-150 hover:bg-primary-500 active:bg-primary-700 rounded-lg">
                           Go back
                       </button>
                       <Link href="#"

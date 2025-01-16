@@ -2,6 +2,7 @@ import React from 'react'
 import {Disclosure, DisclosureButton, DisclosurePanel,} from '@headlessui/react'
 import {MinusIcon, PlusIcon} from '@heroicons/react/20/solid'
 import CheckBox from "@/components/ui/CheckBox";
+import {Card, CardContent} from "@/components/ui/Card";
 
 
 const filters = [
@@ -44,31 +45,35 @@ const filters = [
 
 export default function Filters() {
     return (
-      <form className="pt-60 sticky -top-48 mx-auto w-full max-w-80">
-          <h3 className="font-semibold text-xl">Filters</h3>
-          {filters.map((section) => (
-            <Disclosure key={section.id} as="div" className="border-b border-gray-200 py-6">
-                <h3 className="-my-3 flow-root">
-                    <DisclosureButton
-                      className="group flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                        <span className="font-medium text-gray-900">{section.name}</span>
-                        <span className="ml-6 flex items-center">
+      <Card className="sticky top-16 bg-gray-100 mx-auto w-4/5">
+          <CardContent>
+              <form className="mx-auto w-full">
+                  <h3 className="font-semibold text-xl">Filters</h3>
+                  {filters.map((section) => (
+                    <Disclosure key={section.id} as="div" className="border-b border-gray-200 py-6">
+                        <h3 className="-my-3 flow-root">
+                            <DisclosureButton
+                              className="group flex w-full items-center justify-between py-3 text-sm text-gray-400 hover:text-gray-500">
+                                <span className="font-medium text-gray-900">{section.name}</span>
+                                <span className="ml-6 flex items-center">
                           <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden"/>
                           <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden"/>
                         </span>
-                    </DisclosureButton>
-                </h3>
-                <DisclosurePanel className="pt-6">
-                    <div className="space-y-4">
-                        {section.options.map((option, optionIdx) => (
-                          <div key={option.value} className="flex gap-3">
-                              <CheckBox id={`filter-${section.id}-${optionIdx}`} label={option.value}/>
-                          </div>
-                        ))}
-                    </div>
-                </DisclosurePanel>
-            </Disclosure>
-          ))}
-      </form>
+                            </DisclosureButton>
+                        </h3>
+                        <DisclosurePanel className="pt-6">
+                            <div className="space-y-4">
+                                {section.options.map((option, optionIdx) => (
+                                  <div key={option.value} className="flex gap-3">
+                                      <CheckBox id={`filter-${section.id}-${optionIdx}`} label={option.value}/>
+                                  </div>
+                                ))}
+                            </div>
+                        </DisclosurePanel>
+                    </Disclosure>
+                  ))}
+              </form>
+          </CardContent>
+      </Card>
     )
 }
